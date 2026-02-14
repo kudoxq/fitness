@@ -1,0 +1,50 @@
+# .gitignore — базовый набор для фронтенд‑проекта
+# Папки с ассетами (fonts/, icons/, images/) остаются в репозитории — их НЕ игнорируем.
+
+# macOS
+.DS_Store
+
+# Node / package managers
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnp.*
+.pnpm-debug.log
+
+# Environment / secrets
+.env
+.env.local
+.env.*.local
+
+# Build output / caches
+dist/
+build/
+out/
+.cache/
+.parcel-cache/
+.vite/
+.next/
+.nuxt/
+coverage/
+reports/
+
+# Editor / IDE
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+*.iml
+
+# Logs
+logs/
+*.log
+
+# Misc
+.sass-cache/
+*.tgz
+*.pem
+*.key
+
+# Ensure .gitignore itself is tracked
+!.gitignore
