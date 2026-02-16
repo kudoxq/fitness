@@ -211,6 +211,7 @@ svg * {
 
 :root {
     --color-dark: #000000;
+    --color-dark-alternative: #131619;
     --color-light: #ffffff;
     --color-dark-gray: #404040;
     --color-light-gray: #c4c4c4;
@@ -257,6 +258,19 @@ a:hover {
     padding-inline: var(--container-padding-x);
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     text-transform: uppercase;
@@ -287,6 +301,7 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     column-gap: 20px;
     padding-inline: 32px;
+    background-color: var(--color-dark-alternative);
 }
 
 .header-logo {
@@ -314,7 +329,7 @@ h1, h2, h3, h4, h5, h6 {
 .header-menu-link.is-current::after {
     content: "";
     width: 5px;
-    height: 5px;
+    aspect-ratio: 1;
     background-color: currentColor;
     border-radius: 50%;
 }
@@ -330,11 +345,11 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     row-gap: 4px;
     width: 40px;
-    height: 40px;
+    aspect-ratio: 1;
     padding-left: 8px;
     background-color: transparent;
     border: var(--border);
-    border-radius: var(--border-radius);
+    border-radius: 50%;
     color: var(--color-light);
 }
 
